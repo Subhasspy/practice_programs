@@ -1,30 +1,32 @@
 import java.util.*;
-public class Main
+public class encode_in_ascii
 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num[]=new int[4];
-		String car[]=new String[4];
-		int i=0,j=0;
-		StringTokenizer st = new StringTokenizer("m 66 i 104"," ");  
-        while (st.hasMoreTokens()) {  
-            String temp=st.nextToken();
-            try{
-                int no=Integer.parseInt(temp);
-                num[i++]=no;
-            }
-            catch(NumberFormatException e)
-            {
-                car[j++]=temp;
-            }
-            //i++;
-        }  
-        for(int k=0;k<2;k++)
-        {
-            if(num[k]!=0)
-            System.out.println((char)num[k]);
-            if(!car[k].equals(null))
-            System.out.println((int)car[k].charAt(0));
-        }
+		String []s=sc.nextLine().split(" ");
+		int n=s.length,j=0,k=0;
+		int[] num=new int[n];
+		String[] car=new String[n];
+		for(int i=0;i<n;i++)
+		{
+		    try {
+		        int no=Integer.parseInt(s[i]);
+		        num[j++]=no;
+		    } 
+		    catch(Exception e) {
+		        car[k++]=s[i];
+		    } 
+		}
+		for(int number=0;number<j;number++)
+		{
+		    char c=(char)num[number];
+		    System.out.print(c+" ");
+		}
+		for(int str=0;str<k;str++)
+		{
+		    int b=(int)car[str].charAt(0);
+		    System.out.print(b+" ");
+		}
 	}
 }
+
