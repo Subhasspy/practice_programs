@@ -81,5 +81,6 @@ public class zoho1
 		        System.out.print(c[j]);
 		    }
 		}
+		sc.close();
 	}
 }
