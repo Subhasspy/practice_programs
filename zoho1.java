@@ -23,7 +23,7 @@ public class zoho1
 		            count++;
 		        }
 		    }
-		    if(s[i]!='*')
+		    if(s[i]!='*' && s[i]!=' ')
 		    {
 		        num[l]=count;
 		        c[l]=s[i];
