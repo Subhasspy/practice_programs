@@ -1,5 +1,5 @@
 //input:
-// bbbptank
+// bbbptank =>bptank =>baknpt
 //output:
 // baknp
 //Exp:when we give a string it will print the 5 letter string starts form high repeat to low after that print remaining non repeating char as alphabetical order
@@ -9,9 +9,9 @@ public class zoho1
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		char[] s=sc.nextLine().toCharArray();
-		int[] num=new int[s.length];
-		char[] c=new char[s.length];
-		int l =0,t=5;
+		int[] num=new int[s.length];//to store count
+		char[] c=new char[s.length];//to store curresponding char
+		int l=0,t=5;
 		for(int i=0;i<s.length;i++)
 		{
 		    int count=0;
@@ -54,25 +54,28 @@ public class zoho1
 		}
 		if(l>5)
 		{
-    		for(int i=0;i<l;i++)
-    		{
-    		    if(num[i]!=0 && t>0)
-    		    {
-    		        System.out.print(c[i]);
-    		        t--;
-    		    }
-    		}
-    		int k=0;
-    		while(t>0 && k<l)
-    		{
-    		    if(num[k]==0)
-    		    {
-    		        System.out.print(c[k]);
-    		        
-    		        t--;
-    		    }
-    		    k++;
-    		}
+    		// for(int i=0;i<l;i++)
+    		// {
+    		//     if(num[i]!=0 && t>0)
+    		//     {
+    		//         System.out.print(c[i]);
+    		//         t--;
+    		//     }
+    		// }
+    		// int k=0;
+    		// while(t>0 && k<l)
+    		// {
+    		//     if(num[k]==0)
+    		//     {
+    		//         System.out.print(c[k]);
+    		//         t--;
+    		//     }
+    		//     k++;
+    		// }
+			for(int i=0;i<5;i++){
+
+				System.out.print(c[i]);
+			}
 		}
 		else
 		{
