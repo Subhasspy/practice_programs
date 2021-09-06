@@ -14,5 +14,6 @@ public class chocolate_CEI {
         }
         else
         System.out.println(toco+choco);
+        sc.close();
     }
 }
