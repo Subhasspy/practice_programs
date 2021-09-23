@@ -15,5 +15,6 @@ public class Add_numbers_in_String
 		    sum+=Integer.parseInt(s[i]);
 		}
 		System.out.println(sum);
+        sc.close();
 	}
 }
